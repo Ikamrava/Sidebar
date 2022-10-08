@@ -18,11 +18,15 @@
 
 .container::-webkit-scrollbar {
   width: 10px;
+  height: 50%;
+  
 }
 
 .container:hover::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.486);
   border-radius: 10px;
+  margin-top: 200px;
+  height: 50%;
 }
 
 .images {
@@ -97,4 +101,23 @@ img {
   .container.active {
     left: 0px;
   }
+
+
+}
+
+.hidden{
+  display: none;
+  visibility: hidden;
+  position: absolute;
+  float: center;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 250px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.377);
+  backdrop-filter: blur(3px);
+  z-index: 1;
 }
