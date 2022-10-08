@@ -1,2 +1,0 @@
-# sidebar
- Sidebar like Youtube
