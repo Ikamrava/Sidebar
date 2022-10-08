@@ -1,0 +1,100 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  height: 90vh;
+  width: 250px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.container::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0px;
+}
+
+.container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.container:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.486);
+  border-radius: 10px;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 50px;
+  width: 250px;
+
+  flex-shrink: 0;
+}
+.images:hover {
+  background-color: rgba(204, 205, 204, 0.468);
+}
+
+.images div {
+  margin-left: 18px;
+}
+
+.home {
+  flex: 3;
+}
+
+.imageIcon {
+  flex: 1;
+}
+
+img {
+  width: 20px;
+}
+
+#firstline {
+  background-color: rgba(204, 205, 204, 0.468);
+}
+
+.hamburger {
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  top: 15px;
+  left: 20px;
+}
+
+.bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin: 5px 0;
+  transform: all 0.3s ease;
+  background-color: #000000;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    left: -300px;
+  }
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .container.active {
+    left: 0px;
+  }
+}
